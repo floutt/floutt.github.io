@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% set active_page = 'blog' %}
+{% block title %}{{ article.title|striptags }} · {{ SITENAME }}{% endblock %}
+{% block content %}
+<article>
+  <h1>{{ article.title }}</h1>
+  <p class="post-meta"><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></p>
+  {{ article.content }}
+</article>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% set active_page = page.slug %}
+{% block title %}{{ page.title }} · {{ SITENAME }}{% endblock %}
+{% block content %}
+{{ page.content }}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% set active_page = 'blog' %}
+{% block title %}blog · {{ SITENAME }}{% endblock %}
+{% block content %}
+<ul class="post-list">
+  {% for article in articles %}
+  <li>
+    <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%Y-%m-%d') }}</time>
+    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+  </li>
+  {% else %}
+  <li>No posts yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

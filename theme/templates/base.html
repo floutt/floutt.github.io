@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/extras.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
+  <link rel="alternate" type="application/atom+xml" title="{{ SITENAME }}" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">
+</head>
+<body>
+  {% block header %}
+  <nav class="nav">
+    {% set active = active_page|default('') %}
+	<a href="{{ SITEURL }}/">⌂</a><span class="sep">|</span>
+	<a href="{{ SITEURL }}/about/" {% if active == 'about' %}class="active"{% endif %}>about</a><span class="sep">|</span>
+    <a href="{{ SITEURL }}/blog/" {% if active == 'blog' %}class="active"{% endif %}>blog</a><span class="sep">|</span>
+    <a href="{{ GITHUB_URL }}">github</a><span class="sep">|</span>
+    <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">atom</a>
+  </nav>
+  {% endblock %}
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>

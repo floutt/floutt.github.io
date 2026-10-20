@@ -1,0 +1,21 @@
+/* Additions for the Pelican theme; style.css (your original) is left untouched. */
+a { color: #0b5fff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.nav { text-align: center; margin: 1.5rem 0 2rem; }
+.nav a { color: inherit; }
+.nav a.active { font-weight: 600; text-decoration: underline; }
+.nav .sep { margin: 0 .5em; color: #999; }
+
+.home { margin-top: 18vh; }
+.home h1 { margin-bottom: 0; }
+.home .aka { margin-top: 0; color: #6c757d; }
+
+.post-list { list-style: none; padding: 0; }
+.post-list li { display: flex; gap: 1.5rem; padding: .5rem 0; border-bottom: 1px solid #e0e0e0; }
+.post-list time { color: #6c757d; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+.post-meta { color: #6c757d; font-size: .9rem; }
+pre { overflow-x: auto; padding: 1rem; background: #f8f9fa; }
+code { font-size: .9em; }
+img { max-width: 100%; }

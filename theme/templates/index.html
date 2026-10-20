@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block header %}{% endblock %}
+{% block content %}
+<div class="home text-center">
+  <h1>{{ AUTHOR }}</h1>
+  <p class="aka">aka {{ HANDLE }}</p>
+  <nav class="nav">
+    <a href="{{ SITEURL }}/about/">about</a><span class="sep">|</span>
+    <a href="{{ SITEURL }}/blog/">blog</a><span class="sep">|</span>
+    <a href="{{ GITHUB_URL }}">github</a><span class="sep">|</span>
+    <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">atom</a>
+  </nav>
+</div>
+{% endblock %}
